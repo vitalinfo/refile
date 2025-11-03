@@ -21,6 +21,7 @@ module Refile
       set :sessions, false
       set :logging, false
       set :dump_errors, false
+      set :host_authorization, { permitted_hosts: [] }
       use CustomLogger, "Refile::App", proc { Refile.logger }
     end
 
